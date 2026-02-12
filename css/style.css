@@ -17,6 +17,32 @@ html {
   scroll-padding-top: 6rem;
 }
 
+.btn{
+  display: inline-block;
+  padding: .9rem 3.5rem;
+  background-color: #333;
+  border-radius: 5rem;
+  -webkit-border-radius: 5rem;
+  -moz-border-radius: 5rem;
+  -ms-border-radius: 5rem;
+  -o-border-radius: 5rem;
+  color: #fff;
+  font-size: 1.7rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: scale .3s linear;
+  -webkit-transition: scale .3s linear;
+  -moz-transition: scale .3s linear;
+  -ms-transition: scale .3s linear;
+  -o-transition: scale .3s linear;
+}
+.btn:hover{
+  scale: 1.1;
+  background-color: var(--hover-color);
+}
+section{
+  padding: 2rem 9%;
+}
 /**======================
  **  HEADER
  **========================**/
@@ -104,6 +130,42 @@ header #togler {
   display: none;
 }
 
+/**======================
+ **    Home
+ **========================**/
+.home{
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: url(/images/mainimage.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.home .content{
+  max-width: 50rem;
+}
+.home .content h1{
+  font-size: 6rem;
+  color: #333;
+}
+.home .content span{
+  font-size: 3.5rem;
+  color: var(--hover-color);
+  padding: 1rem 0;
+  line-height: 1.5;
+
+}
+
+.home .content p{
+  font-size: 1.5rem;
+  color: #818181;
+  padding: 1rem 0;
+  line-height: 1.5;
+
+}
+
+
 /* media querie */
 @media (max-width: 1080px) {
   header .items a {
@@ -113,6 +175,15 @@ header #togler {
 @media (max-width: 991px) {
   html {
     font-size: 55%;
+  }
+  header{
+    padding: 2rem;
+  }
+  section{
+    padding: 2rem;
+  }
+  .home{
+    background-position: left;
   }
 }
 @media (max-width: 825px) {
@@ -136,6 +207,23 @@ header #togler {
     padding: 1.5rem;
     display: block;
     background: #fff;
+  }
+
+  .home .content h1{
+    font-size: 7rem;
+  }
+  .home .content span{
+    font-size: 4rem;
+  }
+  .home .content p{
+    font-size: 1.6;
+  }
+
+  
+}
+@media (max-width:600px){
+  .home{
+    background-image: url(/images/second.png);
   }
 }
 @media (max-width: 450px) {
